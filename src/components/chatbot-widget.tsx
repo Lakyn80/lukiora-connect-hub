@@ -25,6 +25,7 @@ export function ChatbotWidget() {
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [sessionId, setSessionId] = useState<string | null>(null); // ← přidáno
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -40,17 +41,44 @@ export function ChatbotWidget() {
     setInputValue("");
     setIsTyping(true);
 
-    // Simulate AI response
-    setTimeout(() => {
+    try {
+      // ↓↓ JEDINÁ FUNKČNÍ ZMĚNA: volání backendu místo setTimeout simulace
+      const API_BASE = import.meta.env.VITE_API_BASE || "";
+      const res = await fetch(`${API_BASE}/api/chat/respond`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: userMessage.text,
+          session_id: sessionId,
+          history: messages.map(m => ({
+            role: m.isBot ? "assistant" : "user",
+            content: m.text
+          }))
+        })
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data: { session_id: string; reply: string } = await res.json();
+      if (!sessionId) setSessionId(data.session_id);
+
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "Thanks for your message! This is a demo chatbot. In the full version, I'd be connected to our AI API and provide intelligent responses about our chatbot solutions.",
+        text: data.reply,
         isBot: true,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, botMessage]);
+    } catch (e: any) {
+      const errMessage: Message = {
+        id: (Date.now() + 2).toString(),
+        text: `Error: ${e?.message || "Request failed"}`,
+        isBot: true,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errMessage]);
+    } finally {
       setIsTyping(false);
-    }, 1500);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
