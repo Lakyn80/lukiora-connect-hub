@@ -2,7 +2,7 @@ from __future__ import annotations
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-BASE_DIR = Path(__file__).resolve().parents[2]  # .../backend
+BASE_DIR = Path(__file__).resolve().parents[2]
 ENV_PATH = BASE_DIR / ".env"
 
 class Settings(BaseSettings):
@@ -12,7 +12,7 @@ class Settings(BaseSettings):
         "http://localhost:5173", "http://127.0.0.1:5173",
     ]
 
-    # SMTP + e-mail
+    # SMTP
     SMTP_HOST: str | None = None
     SMTP_PORT: int = 465
     SMTP_USER: str | None = None
@@ -20,10 +20,16 @@ class Settings(BaseSettings):
     EMAIL_FROM: str | None = None
     EMAIL_TO: str | None = None
 
-    # DeepSeek API
+    # DeepSeek
     DEEPSEEK_API_KEY: str | None = None
-    DEEPSEEK_MODEL: str = "deepseek-chat"  # nebo "deepseek-reasoner"
-    DEEPSEEK_BASE_URL: str = "https://api.deepseek.com"  # /chat/completions
+    DEEPSEEK_MODEL: str = "deepseek-chat"
+    DEEPSEEK_BASE_URL: str = "https://api.deepseek.com"
+    DEEPSEEK_SYSTEM_PROMPT: str = "You are a helpful assistant. Reply in Czech."
+
+    # Telegram
+    TELEGRAM_BOT_TOKEN: str | None = None
+    TG_WEBHOOK_TOKEN: str | None = None
+    TELEGRAM_API_BASE: str = "https://api.telegram.org"
 
     model_config = SettingsConfigDict(
         env_file=str(ENV_PATH),

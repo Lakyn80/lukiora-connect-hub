@@ -7,8 +7,12 @@ from app.core.config import settings
 
 def _to_messages(req: ChatRequest) -> list[dict]:
     msgs: list[dict] = []
+    # system prompt s preferovaným jazykem
+    if settings.DEEPSEEK_SYSTEM_PROMPT:
+        msgs.append({"role": "system", "content": settings.DEEPSEEK_SYSTEM_PROMPT})
     if req.history:
         for m in req.history:
+            # očekává "user" | "assistant"
             msgs.append({"role": m.role, "content": m.content})
     msgs.append({"role": "user", "content": req.message})
     return msgs
@@ -16,7 +20,12 @@ def _to_messages(req: ChatRequest) -> list[dict]:
 async def _deepseek_reply(req: ChatRequest) -> str:
     url = f"{settings.DEEPSEEK_BASE_URL}/chat/completions"
     headers = {"Authorization": f"Bearer {settings.DEEPSEEK_API_KEY}"}
-    payload = {"model": settings.DEEPSEEK_MODEL, "messages": _to_messages(req), "stream": False}
+    payload = {
+        "model": settings.DEEPSEEK_MODEL,
+        "messages": _to_messages(req),
+        "stream": False,
+        "temperature": 0.7,
+    }
     async with httpx.AsyncClient(timeout=30) as client:
         r = await client.post(url, headers=headers, json=payload)
         r.raise_for_status()
