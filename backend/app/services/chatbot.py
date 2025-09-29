@@ -4,15 +4,22 @@ import datetime as dt
 import httpx
 from app.schemas.chat import ChatRequest, ChatResponse
 from app.core.config import settings
+from app.services.knowledge import get_context
 
 def _to_messages(req: ChatRequest) -> list[dict]:
     msgs: list[dict] = []
-    # system prompt s preferovaným jazykem
+    # systémový prompt (omezení na tvé služby a jazyková pravidla)
     if settings.DEEPSEEK_SYSTEM_PROMPT:
         msgs.append({"role": "system", "content": settings.DEEPSEEK_SYSTEM_PROMPT})
+
+    # firemní znalosti z Markdownů
+    ctx = get_context()
+    if ctx:
+        msgs.append({"role": "system", "content": f"Company knowledge:\n{ctx}"})
+
+    # historie + aktuální dotaz
     if req.history:
         for m in req.history:
-            # očekává "user" | "assistant"
             msgs.append({"role": m.role, "content": m.content})
     msgs.append({"role": "user", "content": req.message})
     return msgs
@@ -24,7 +31,7 @@ async def _deepseek_reply(req: ChatRequest) -> str:
         "model": settings.DEEPSEEK_MODEL,
         "messages": _to_messages(req),
         "stream": False,
-        "temperature": 0.7,
+        "temperature": 0.5,
     }
     async with httpx.AsyncClient(timeout=30) as client:
         r = await client.post(url, headers=headers, json=payload)
@@ -39,8 +46,8 @@ async def generate_reply(req: ChatRequest) -> ChatResponse:
             text = await _deepseek_reply(req)
         except Exception as e:
             now = dt.datetime.utcnow().isoformat(timespec="seconds") + "Z"
-            text = f"[DeepSeek error: {type(e).__name__}] You said: {req.message} — {now}"
+            text = f"[DeepSeek error: {type(e).__name__}] {now}"
     else:
         now = dt.datetime.utcnow().isoformat(timespec="seconds") + "Z"
-        text = f"You said: {req.message} — {now}"
+        text = f"(no API key) {now}"
     return ChatResponse(session_id=session, reply=text)

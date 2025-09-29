@@ -10,8 +10,11 @@ export function HeroSection() {
       
       {/* Floating orbs */}
       <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-primary/20 blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-accent/20 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-      
+      <div
+        className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-accent/20 blur-3xl animate-float"
+        style={{ animationDelay: "2s" }}
+      />
+
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,7 +30,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-8"
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">AI-Powered Solutions</span>
+            <span className="text-sm font-medium">AI & Web Solutions</span>
           </motion.div>
 
           {/* Main heading */}
@@ -38,7 +41,7 @@ export function HeroSection() {
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             Next-Gen{" "}
-            <span className="text-gradient">AI Chatbots</span>
+            <span className="text-gradient">Websites & AI Chatbots</span>
             <br />
             for Your Business
           </motion.h1>
@@ -50,8 +53,9 @@ export function HeroSection() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Transform customer engagement with intelligent chatbots for WhatsApp, Telegram, and custom APIs. 
-            Powered by cutting-edge AI technology.
+            Launch a modern one-page site (Business Card, Presentation, or Classic 365)
+            with a built-in contact form. Add WhatsApp/Telegram chatbots and AI assistants
+            powered by our API.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -61,21 +65,25 @@ export function HeroSection() {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button 
-              size="lg" 
-              className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold glow-primary hover-lift"
-            >
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="glass border-primary/20 hover:border-primary/40 px-8 py-6 text-lg font-semibold hover-lift"
-            >
-              View Our Work
-            </Button>
+            <a href="#contact">
+              <Button
+                size="lg"
+                className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold glow-primary hover-lift"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+
+            <a href="#offerings">
+              <Button
+                variant="outline"
+                size="lg"
+                className="glass border-primary/20 hover:border-primary/40 px-8 py-6 text-lg font-semibold hover-lift"
+              >
+                View Our Work
+              </Button>
+            </a>
           </motion.div>
 
           {/* Scroll indicator */}

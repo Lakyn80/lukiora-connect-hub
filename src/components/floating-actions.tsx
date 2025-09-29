@@ -8,14 +8,14 @@ export function FloatingActions() {
 
   const handleWhatsApp = () => {
     // WhatsApp Web URL with pre-filled message
-    const phoneNumber = "1234567890"; // Replace with actual number
+    const phoneNumber = "+420704416769"; // Replace with actual number
     const message = encodeURIComponent("Hi! I'm interested in your AI chatbot solutions.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   const handleTelegram = () => {
     // Telegram URL
-    const username = "lukiora"; // Replace with actual username
+    const username = "lukiora_bot"; // Replace with actual username
     window.open(`https://t.me/${username}`, '_blank');
   };
 

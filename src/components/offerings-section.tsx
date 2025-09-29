@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { MessageCircle, Send, Bot, TrendingUp, Play, ExternalLink } from "lucide-react";
+import { MessageCircle, Send, Bot, TrendingUp, Play, ExternalLink, Layout, PanelsTopLeft, MonitorCog } from "lucide-react";
 import { useState } from "react";
 
 const offerings = [
@@ -12,9 +12,16 @@ const offerings = [
     description: "Intelligent customer support and sales automation for WhatsApp Business",
     icon: MessageCircle,
     color: "text-green-500",
-    details: "Our WhatsApp chatbots provide 24/7 customer support, automated order processing, and personalized product recommendations. Integrate seamlessly with your existing business processes.",
-    features: ["24/7 Customer Support", "Order Processing", "Product Recommendations", "Multi-language Support", "Analytics Dashboard"],
-    demoVideo: "https://example.com/whatsapp-demo" // Placeholder
+    details:
+      "Our WhatsApp chatbots provide 24/7 customer support, automated order processing, and personalized product recommendations. Integrate seamlessly with your existing business processes.",
+    features: [
+      "24/7 Customer Support",
+      "Order Processing",
+      "Product Recommendations",
+      "Multi-language Support",
+      "Analytics Dashboard",
+    ],
+    demoVideo: "https://example.com/whatsapp-demo",
   },
   {
     id: "telegram",
@@ -22,9 +29,16 @@ const offerings = [
     description: "Advanced bot automation for Telegram communities and customer service",
     icon: Send,
     color: "text-blue-500",
-    details: "Build powerful Telegram bots for community management, automated responses, and interactive experiences. Perfect for crypto projects, news channels, and customer support.",
-    features: ["Community Management", "Automated Responses", "File Sharing", "Payment Integration", "Group Administration"],
-    demoVideo: "https://example.com/telegram-demo" // Placeholder
+    details:
+      "Build powerful Telegram bots for community management, automated responses, and interactive experiences. Perfect for crypto projects, news channels, and customer support.",
+    features: [
+      "Community Management",
+      "Automated Responses",
+      "File Sharing",
+      "Payment Integration",
+      "Group Administration",
+    ],
+    demoVideo: "https://example.com/telegram-demo",
   },
   {
     id: "api",
@@ -32,9 +46,16 @@ const offerings = [
     description: "Custom AI-powered chatbots with API integration for any platform",
     icon: Bot,
     color: "text-purple-500",
-    details: "Create sophisticated AI chatbots that can be integrated into websites, mobile apps, or any platform via our robust API. Fully customizable and scalable.",
-    features: ["Custom AI Training", "API Integration", "Multi-platform Support", "Real-time Analytics", "Scalable Infrastructure"],
-    demoVideo: "https://example.com/api-demo" // Placeholder
+    details:
+      "Create sophisticated AI chatbots that can be integrated into websites, mobile apps, or any platform via our robust API. Fully customizable and scalable.",
+    features: [
+      "Custom AI Training",
+      "API Integration",
+      "Multi-platform Support",
+      "Real-time Analytics",
+      "Scalable Infrastructure",
+    ],
+    demoVideo: "https://example.com/api-demo",
   },
   {
     id: "marketing",
@@ -42,10 +63,69 @@ const offerings = [
     description: "Intelligent marketing automation and customer engagement tools",
     icon: TrendingUp,
     color: "text-accent",
-    details: "Leverage AI to automate your marketing campaigns, analyze customer behavior, and optimize conversion rates. Get actionable insights and automated responses.",
-    features: ["Campaign Automation", "Customer Analytics", "Conversion Optimization", "A/B Testing", "ROI Tracking"],
-    demoVideo: "https://example.com/marketing-demo" // Placeholder
-  }
+    details:
+      "Leverage AI to automate your marketing campaigns, analyze customer behavior, and optimize conversion rates. Get actionable insights and automated responses.",
+    features: [
+      "Campaign Automation",
+      "Customer Analytics",
+      "Conversion Optimization",
+      "A/B Testing",
+      "ROI Tracking",
+    ],
+    demoVideo: "https://example.com/marketing-demo",
+  },
+  // --- NEW: Web services cards ---
+  {
+    id: "web-business-card",
+    title: "Web Business Card",
+    description: "Fast one-page site with clean code and minimal running costs",
+    icon: Layout,
+    color: "text-primary",
+    details:
+      "The quickest, most affordable way to launch a clear and attractive one-page site. Ideal for freelancers and new businesses. Hand-coded for speed, security, and SEO-friendly structure. Colors and typography adjusted to your brand. Content updates handled by us on request (no admin UI). Hosting on a second-level domain included in the package value.",
+    features: [
+      "One-page up to ~1,800 chars or 10 images",
+      "Brand colors & fonts",
+      "SEO-friendly, lightweight code",
+      "Low maintenance costs",
+      "From 1 230 CZK",
+    ],
+    demoVideo: "https://example.com/web-business-card-demo",
+  },
+  {
+    id: "web-presentation",
+    title: "Web Presentation",
+    description: "Template one-pager in three sections, fast and SEO-friendly",
+    icon: PanelsTopLeft,
+    color: "text-primary",
+    details:
+      "An effective way to promote your services online. One-page site split into three sections (~5,400 chars or up to 30 images). Built from our starter template with your brand colors and fonts. Extendable with extra sections, subpages, or a contact form. Hand-coded for performance and SEO. Hosting on a second-level domain included in the package value.",
+    features: [
+      "3-section one-pager (~5,400 chars / 30 images)",
+      "Brand styling on our template",
+      "Extendable with sections/subpages",
+      "Contact form optional",
+      "From 3 210 CZK",
+    ],
+    demoVideo: "https://example.com/web-presentation-demo",
+  },
+  {
+    id: "web-classic-365",
+    title: "Web Classic 365",
+    description: "WordPress + DIVI: build it yourself or let us handle it",
+    icon: MonitorCog,
+    color: "text-primary",
+    details:
+      "We prepare WordPress with the professional DIVI builder. You can craft pages yourself from 300+ starter layouts or pre-pay our time for one-off delivery and ongoing care. Suitable from simple to mid-size sites, extendable with plugins. Includes hosting on a second-level domain.",
+    features: [
+      "WordPress + DIVI ready",
+      "300+ starter layouts",
+      "DIY or full-service delivery",
+      "Extendable with plugins",
+      "From 3 650 CZK / year",
+    ],
+    demoVideo: "https://example.com/web-classic-365-demo",
+  },
 ];
 
 export function OfferingsSection() {
@@ -114,7 +194,7 @@ export function OfferingsSection() {
                         {offering.details}
                       </DialogDescription>
                     </DialogHeader>
-                    
+
                     <div className="mt-6">
                       <h4 className="font-semibold mb-3">Key Features:</h4>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -144,9 +224,7 @@ export function OfferingsSection() {
                     </div>
 
                     <div className="flex gap-3 mt-6">
-                      <Button className="flex-1">
-                        Get Started
-                      </Button>
+                      <Button className="flex-1">Get Started</Button>
                       <Button variant="outline" className="flex-1">
                         Schedule Demo
                       </Button>
