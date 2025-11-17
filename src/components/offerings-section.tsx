@@ -3,133 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { MessageCircle, Send, Bot, TrendingUp, Play, ExternalLink, Layout, PanelsTopLeft, MonitorCog } from "lucide-react";
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const offerings = [
-  {
-    id: "whatsapp",
-    title: "WhatsApp Chatbot",
-    description: "Intelligent customer support and sales automation for WhatsApp Business",
-    icon: MessageCircle,
-    color: "text-green-500",
-    details:
-      "Our WhatsApp chatbots provide 24/7 customer support, automated order processing, and personalized product recommendations. Integrate seamlessly with your existing business processes.",
-    features: [
-      "24/7 Customer Support",
-      "Order Processing",
-      "Product Recommendations",
-      "Multi-language Support",
-      "Analytics Dashboard",
-    ],
-    demoVideo: "https://example.com/whatsapp-demo",
-  },
-  {
-    id: "telegram",
-    title: "Telegram Chatbot",
-    description: "Advanced bot automation for Telegram communities and customer service",
-    icon: Send,
-    color: "text-blue-500",
-    details:
-      "Build powerful Telegram bots for community management, automated responses, and interactive experiences. Perfect for crypto projects, news channels, and customer support.",
-    features: [
-      "Community Management",
-      "Automated Responses",
-      "File Sharing",
-      "Payment Integration",
-      "Group Administration",
-    ],
-    demoVideo: "https://example.com/telegram-demo",
-  },
-  {
-    id: "api",
-    title: "AI API Chatbot",
-    description: "Custom AI-powered chatbots with API integration for any platform",
-    icon: Bot,
-    color: "text-purple-500",
-    details:
-      "Create sophisticated AI chatbots that can be integrated into websites, mobile apps, or any platform via our robust API. Fully customizable and scalable.",
-    features: [
-      "Custom AI Training",
-      "API Integration",
-      "Multi-platform Support",
-      "Real-time Analytics",
-      "Scalable Infrastructure",
-    ],
-    demoVideo: "https://example.com/api-demo",
-  },
-  {
-    id: "marketing",
-    title: "AI Marketing Assistants",
-    description: "Intelligent marketing automation and customer engagement tools",
-    icon: TrendingUp,
-    color: "text-accent",
-    details:
-      "Leverage AI to automate your marketing campaigns, analyze customer behavior, and optimize conversion rates. Get actionable insights and automated responses.",
-    features: [
-      "Campaign Automation",
-      "Customer Analytics",
-      "Conversion Optimization",
-      "A/B Testing",
-      "ROI Tracking",
-    ],
-    demoVideo: "https://example.com/marketing-demo",
-  },
-  // --- NEW: Web services cards ---
-  {
-    id: "web-business-card",
-    title: "Web Business Card",
-    description: "Fast one-page site with clean code and minimal running costs",
-    icon: Layout,
-    color: "text-primary",
-    details:
-      "The quickest, most affordable way to launch a clear and attractive one-page site. Ideal for freelancers and new businesses. Hand-coded for speed, security, and SEO-friendly structure. Colors and typography adjusted to your brand. Content updates handled by us on request (no admin UI). Hosting on a second-level domain included in the package value.",
-    features: [
-      "One-page up to ~1,800 chars or 10 images",
-      "Brand colors & fonts",
-      "SEO-friendly, lightweight code",
-      "Low maintenance costs",
-      "From 1 230 CZK",
-    ],
-    demoVideo: "https://example.com/web-business-card-demo",
-  },
-  {
-    id: "web-presentation",
-    title: "Web Presentation",
-    description: "Template one-pager in three sections, fast and SEO-friendly",
-    icon: PanelsTopLeft,
-    color: "text-primary",
-    details:
-      "An effective way to promote your services online. One-page site split into three sections (~5,400 chars or up to 30 images). Built from our starter template with your brand colors and fonts. Extendable with extra sections, subpages, or a contact form. Hand-coded for performance and SEO. Hosting on a second-level domain included in the package value.",
-    features: [
-      "3-section one-pager (~5,400 chars / 30 images)",
-      "Brand styling on our template",
-      "Extendable with sections/subpages",
-      "Contact form optional",
-      "From 3 210 CZK",
-    ],
-    demoVideo: "https://example.com/web-presentation-demo",
-  },
-  {
-    id: "web-classic-365",
-    title: "Web Classic 365",
-    description: "WordPress + DIVI: build it yourself or let us handle it",
-    icon: MonitorCog,
-    color: "text-primary",
-    details:
-      "We prepare WordPress with the professional DIVI builder. You can craft pages yourself from 300+ starter layouts or pre-pay our time for one-off delivery and ongoing care. Suitable from simple to mid-size sites, extendable with plugins. Includes hosting on a second-level domain.",
-    features: [
-      "WordPress + DIVI ready",
-      "300+ starter layouts",
-      "DIY or full-service delivery",
-      "Extendable with plugins",
-      "From 3 650 CZK / year",
-    ],
-    demoVideo: "https://example.com/web-classic-365-demo",
-  },
-];
+const offeringIcons = {
+  whatsapp: { icon: MessageCircle, color: "text-green-500" },
+  telegram: { icon: Send, color: "text-blue-500" },
+  api: { icon: Bot, color: "text-purple-500" },
+  marketing: { icon: TrendingUp, color: "text-accent" },
+  webCard: { icon: Layout, color: "text-primary" },
+  webPresentation: { icon: PanelsTopLeft, color: "text-primary" },
+  webClassic: { icon: MonitorCog, color: "text-primary" },
+};
+
+const offeringKeys = ['whatsapp', 'telegram', 'api', 'marketing', 'webCard', 'webPresentation', 'webClassic'];
 
 export function OfferingsSection() {
-  const [selectedOffering, setSelectedOffering] = useState<typeof offerings[0] | null>(null);
+  const { t } = useTranslation();
 
   return (
     <section id="offerings" className="py-24 relative">
@@ -142,19 +31,19 @@ export function OfferingsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient">AI Solutions</span>
+            {t('offerings.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our comprehensive suite of AI-powered chatbot solutions designed to revolutionize your business operations.
+            {t('offerings.subtitle')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {offerings.map((offering, index) => {
-            const Icon = offering.icon;
+          {offeringKeys.map((key, index) => {
+            const { icon: Icon, color } = offeringIcons[key as keyof typeof offeringIcons];
             return (
               <motion.div
-                key={offering.id}
+                key={key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -165,13 +54,13 @@ export function OfferingsSection() {
                     <Card className="glass hover-lift cursor-pointer group h-full">
                       <CardHeader className="text-center">
                         <div className="mx-auto w-16 h-16 rounded-full bg-background/50 flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-300">
-                          <Icon className={`w-8 h-8 ${offering.color}`} />
+                          <Icon className={`w-8 h-8 ${color}`} />
                         </div>
                         <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors">
-                          {offering.title}
+                          {t(`offerings.${key}.title`)}
                         </CardTitle>
                         <CardDescription className="text-muted-foreground">
-                          {offering.description}
+                          {t(`offerings.${key}.description`)}
                         </CardDescription>
                       </CardHeader>
                       <CardContent className="text-center">
@@ -182,51 +71,62 @@ export function OfferingsSection() {
                       </CardContent>
                     </Card>
                   </DialogTrigger>
-                  <DialogContent className="max-w-2xl">
+                  <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                     <DialogHeader>
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 rounded-full bg-background/50 flex items-center justify-center">
-                          <Icon className={`w-6 h-6 ${offering.color}`} />
+                          <Icon className={`w-6 h-6 ${color}`} />
                         </div>
-                        <DialogTitle className="text-2xl">{offering.title}</DialogTitle>
+                        <DialogTitle className="text-2xl">{t(`offerings.${key}.title`)}</DialogTitle>
                       </div>
                       <DialogDescription className="text-base leading-relaxed">
-                        {offering.details}
+                        {t(`offerings.${key}.description`)}
                       </DialogDescription>
                     </DialogHeader>
 
                     <div className="mt-6">
-                      <h4 className="font-semibold mb-3">Key Features:</h4>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {offering.features.map((feature, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm">
-                            <div className="w-2 h-2 rounded-full bg-primary" />
-                            {feature}
-                          </li>
-                        ))}
+                      <h4 className="font-semibold mb-3">{t(`offerings.${key}.features.title`)}</h4>
+                      <ul className="space-y-2">
+                        {Object.keys(t(`offerings.${key}.features`, { returnObjects: true }) as object)
+                          .filter(k => k !== 'title')
+                          .map((featureKey, i) => (
+                            <li key={i} className="flex items-start gap-2 text-sm">
+                              <div className="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                              <span>{t(`offerings.${key}.features.${featureKey}`)}</span>
+                            </li>
+                          ))}
                       </ul>
+                    </div>
+
+                    <div className="mt-6">
+                      <h4 className="font-semibold mb-3">{t(`offerings.${key}.pricing.title`)}</h4>
+                      <div className="glass rounded-lg p-4 space-y-2">
+                        {Object.keys(t(`offerings.${key}.pricing`, { returnObjects: true }) as object)
+                          .filter(k => k !== 'title')
+                          .map((priceKey, i) => (
+                            <div key={i} className="flex justify-between items-center text-sm">
+                              <span className="text-muted-foreground">{t(`offerings.${key}.pricing.${priceKey}`)}</span>
+                            </div>
+                          ))}
+                      </div>
                     </div>
 
                     <div className="mt-6 p-4 glass rounded-lg">
                       <div className="flex items-center gap-3 mb-3">
                         <Play className="w-5 h-5 text-accent" />
-                        <span className="font-semibold">Demo Video</span>
+                        <span className="font-semibold">Demo</span>
                       </div>
                       <div className="bg-background/20 rounded-lg p-8 text-center">
                         <div className="text-muted-foreground mb-4">
                           <Play className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                          Video demo coming soon
+                          {t(`offerings.${key}.demo`)}
                         </div>
-                        <Button variant="outline" size="sm" disabled>
-                          Watch Demo
-                        </Button>
                       </div>
                     </div>
 
                     <div className="flex gap-3 mt-6">
-                      <Button className="flex-1">Get Started</Button>
-                      <Button variant="outline" className="flex-1">
-                        Schedule Demo
+                      <Button className="flex-1" asChild>
+                        <a href="#contact">{t(`offerings.${key}.orderNow`)}</a>
                       </Button>
                     </div>
                   </DialogContent>

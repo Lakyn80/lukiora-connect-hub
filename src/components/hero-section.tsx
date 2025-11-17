@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
+  const { t } = useTranslation();
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
@@ -30,7 +32,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-8"
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">AI & Web Solutions</span>
+            <span className="text-sm font-medium">{t('hero.badge')}</span>
           </motion.div>
 
           {/* Main heading */}
@@ -40,10 +42,8 @@ export function HeroSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            Next-Gen{" "}
-            <span className="text-gradient">Websites & AI Chatbots</span>
-            <br />
-            for Your Business
+            {t('hero.title')}{" "}
+            <span className="text-gradient">{t('hero.titleHighlight')}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -53,9 +53,7 @@ export function HeroSection() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Launch a modern one-page site (Business Card, Presentation, or Classic 365)
-            with a built-in contact form. Add WhatsApp/Telegram chatbots and AI assistants
-            powered by our API.
+            {t('hero.subtitle')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -70,7 +68,7 @@ export function HeroSection() {
                 size="lg"
                 className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold glow-primary hover-lift"
               >
-                Get Started Today
+                {t('hero.ctaPrimary')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
@@ -81,7 +79,7 @@ export function HeroSection() {
                 size="lg"
                 className="glass border-primary/20 hover:border-primary/40 px-8 py-6 text-lg font-semibold hover-lift"
               >
-                View Our Work
+                {t('hero.ctaSecondary')}
               </Button>
             </a>
           </motion.div>

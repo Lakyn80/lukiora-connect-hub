@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "AI & Web Revolution",
+    "title": "AI Chatbots & Web Solutions",
+    "titleHighlight": "For Your Business",
+    "subtitle": "Automate customer support, increase sales, and expand your online presence with our intelligent chatbots and modern web solutions.",
+    "ctaPrimary": "Start Free",
+    "ctaSecondary": "View Solutions",
+    "scrollDown": "Scroll down"
+  },
+  "offerings": {
+    "title": "Our Solutions",
+    "subtitle": "Choose the perfect solution for your business",
+    "whatsapp": {
+      "title": "WhatsApp Chatbot",
+      "description": "Automated customer support 24/7",
+      "features": {
+        "title": "Features",
+        "support247": "24/7 Support",
+        "orderProcessing": "Order Processing",
+        "autoResponses": "Automatic Responses",
+        "analytics": "Analytics & Statistics"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "setup": "Setup",
+        "setupPrice": "from 2,500 CZK",
+        "monthly": "Monthly Fee",
+        "monthlyPrice": "from 500 CZK/month"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    },
+    "telegram": {
+      "title": "Telegram Chatbot",
+      "description": "Community management and automation",
+      "features": {
+        "title": "Features",
+        "communityManagement": "Community Management",
+        "customCommands": "Custom Commands",
+        "notifications": "Notifications",
+        "integration": "API Integration"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "setup": "Setup",
+        "setupPrice": "from 2,000 CZK",
+        "monthly": "Monthly Fee",
+        "monthlyPrice": "from 400 CZK/month"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    },
+    "api": {
+      "title": "AI API Chatbot",
+      "description": "Custom AI assistant trained on your data",
+      "features": {
+        "title": "Features",
+        "customTraining": "Custom Training",
+        "multiPlatform": "Multi-Platform",
+        "advancedAI": "Advanced AI",
+        "fullControl": "Full Control"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "setup": "Setup",
+        "setupPrice": "from 5,000 CZK",
+        "monthly": "Monthly Fee",
+        "monthlyPrice": "from 1,000 CZK/month"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    },
+    "marketing": {
+      "title": "AI Marketing Assistants",
+      "description": "Automate marketing campaigns with AI",
+      "features": {
+        "title": "Features",
+        "campaignAutomation": "Campaign Automation",
+        "contentGeneration": "Content Generation",
+        "analytics": "Advanced Analytics",
+        "personalization": "Personalization"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "custom": "Custom Quote",
+        "contact": "Contact us for pricing"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    },
+    "webCard": {
+      "title": "Web Business Card",
+      "description": "Simple 1-page presentation of your business",
+      "features": {
+        "title": "Features",
+        "responsive": "Responsive Design",
+        "seo": "SEO Optimization",
+        "fast": "Fast Loading",
+        "customDomain": "Custom Domain"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "onetime": "One-time Payment",
+        "onetimePrice": "from 1,230 CZK",
+        "hosting": "Hosting",
+        "hostingPrice": "from 150 CZK/year"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    },
+    "webPresentation": {
+      "title": "Web Presentation",
+      "description": "Complete 3-section website for your company",
+      "features": {
+        "title": "Features",
+        "threeSections": "3 Content Sections",
+        "contactForm": "Contact Form",
+        "gallery": "Photo Gallery",
+        "cms": "Basic CMS"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "onetime": "One-time Payment",
+        "onetimePrice": "from 3,210 CZK",
+        "hosting": "Hosting",
+        "hostingPrice": "from 300 CZK/year"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    },
+    "webClassic": {
+      "title": "Web Classic 365",
+      "description": "Professional WordPress website with DIVI builder",
+      "features": {
+        "title": "Features",
+        "wordpress": "WordPress + DIVI",
+        "unlimitedPages": "Unlimited Pages",
+        "ecommerce": "E-commerce Options",
+        "support": "Annual Support"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "yearly": "Annual Fee",
+        "yearlyPrice": "from 3,650 CZK/year",
+        "includes": "Includes hosting and maintenance"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
+    }
+  },
+  "comingSoon": {
+    "badge": "Coming Soon",
+    "title": "AI Marketing Revolution",
+    "subtitle": "We're preparing advanced AI tools that will change the way you do marketing.",
+    "features": {
+      "smartTargeting": {
+        "title": "Smart Targeting",
+        "description": "AI identifies your ideal customers"
+      },
+      "advancedAnalytics": {
+        "title": "Advanced Analytics",
+        "description": "Detailed insights on campaign performance"
+      },
+      "automationSuite": {
+        "title": "Automation Suite",
+        "description": "Complete automation of marketing processes"
+      },
+      "growthEngine": {
+        "title": "Growth Engine",
+        "description": "AI optimizes your campaigns in real-time"
+      }
+    },
+    "notify": "Notify Me",
+    "launch": "Expected launch: Q2 2024"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have questions? We're happy to help!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Describe your project or question...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMin": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 10 characters"
+    },
+    "success": "Thank you! Your message has been sent.",
+    "error": "Sorry, something went wrong. Please try again."
+  },
+  "chatbot": {
+    "title": "Can we help you?",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "welcome": "Hello! How can I help you today?",
+    "error": "Sorry, something went wrong. Please try again.",
+    "rateLimit": "Too many requests. Please try again in a moment."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
+  }
+}

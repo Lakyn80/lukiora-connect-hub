@@ -2,31 +2,17 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, Rocket, Target, BarChart3, Zap, Bell } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const upcomingFeatures = [
-  {
-    icon: Target,
-    title: "Smart Targeting",
-    description: "AI-powered customer segmentation and personalized messaging"
-  },
-  {
-    icon: BarChart3,
-    title: "Advanced Analytics",
-    description: "Deep insights into customer behavior and campaign performance"
-  },
-  {
-    icon: Zap,
-    title: "Automation Suite",
-    description: "Complete marketing workflow automation with AI optimization"
-  },
-  {
-    icon: Rocket,
-    title: "Growth Engine",
-    description: "AI assistants that scale your marketing efforts automatically"
-  }
-];
+const featureIcons = {
+  smartTargeting: Target,
+  advancedAnalytics: BarChart3,
+  automationSuite: Zap,
+  growthEngine: Rocket,
+};
 
 export function ComingSoonSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background effects */}
@@ -44,15 +30,14 @@ export function ComingSoonSection() {
         >
           <div className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-8">
             <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-            <span className="text-sm font-medium">Coming Soon</span>
+            <span className="text-sm font-medium">{t('comingSoon.badge')}</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            AI Marketing <span className="text-gradient">Revolution</span>
+            {t('comingSoon.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get ready for the next generation of AI-powered marketing assistants. 
-            Smart, autonomous, and designed to supercharge your growth.
+            {t('comingSoon.subtitle')}
           </p>
         </motion.div>
 
@@ -82,10 +67,7 @@ export function ComingSoonSection() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="glow-accent">
                   <Bell className="mr-2 w-4 h-4" />
-                  Notify Me When Ready
-                </Button>
-                <Button variant="outline" className="glass">
-                  Learn More
+                  {t('comingSoon.notify')}
                 </Button>
               </div>
             </CardContent>
@@ -94,11 +76,11 @@ export function ComingSoonSection() {
 
         {/* Feature grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {upcomingFeatures.map((feature, index) => {
-            const Icon = feature.icon;
+          {Object.keys(featureIcons).map((key, index) => {
+            const Icon = featureIcons[key as keyof typeof featureIcons];
             return (
               <motion.div
-                key={index}
+                key={key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -109,11 +91,11 @@ export function ComingSoonSection() {
                     <div className="mx-auto w-12 h-12 rounded-full bg-background/20 flex items-center justify-center mb-4">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <CardTitle className="text-lg">{feature.title}</CardTitle>
+                    <CardTitle className="text-lg">{t(`comingSoon.features.${key}.title`)}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-center">
-                      {feature.description}
+                      {t(`comingSoon.features.${key}.description`)}
                     </CardDescription>
                   </CardContent>
                 </Card>
@@ -136,7 +118,7 @@ export function ComingSoonSection() {
               <span className="text-sm font-medium">In Development</span>
             </div>
             <div className="w-px h-6 bg-border" />
-            <span className="text-sm text-muted-foreground">Expected Q2 2024</span>
+            <span className="text-sm text-muted-foreground">{t('comingSoon.launch')}</span>
           </div>
         </motion.div>
       </div>

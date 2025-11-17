@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
-const navItems = [
-  { href: "#offerings", label: "Solutions" },
-  { href: "#contact", label: "Contact" },
-];
+import { useTranslation } from "react-i18next";
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const navItems = [
+    { href: "#offerings", label: t('nav.solutions') },
+    { href: "#contact", label: t('nav.contact') },
+  ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -49,17 +52,19 @@ export function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
+            <LanguageSwitcher />
             <ThemeToggle />
-            <Button 
+            <Button
               onClick={() => scrollToSection('#contact')}
               className="glow-primary"
             >
-              Get Started
+              {t('nav.getStarted')}
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <Button
               variant="ghost"
@@ -93,11 +98,11 @@ export function Navigation() {
                   {item.label}
                 </button>
               ))}
-              <Button 
+              <Button
                 onClick={() => scrollToSection('#contact')}
                 className="w-full glow-primary"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </div>
           </motion.div>

@@ -8,16 +8,18 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { z } from "zod";
 import { Send, Mail, MessageSquare } from "lucide-react";
-import { postContact } from "@/lib/api"; // ← přidáno
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters")
-});
+import { postContact } from "@/lib/api";
+import { useTranslation } from "react-i18next";
 
 export function ContactForm() {
   const { toast } = useToast();
+  const { t } = useTranslation();
+
+  const contactSchema = z.object({
+    name: z.string().trim().min(2, t('contact.validation.nameMin')).max(100, "Name must be less than 100 characters"),
+    email: z.string().trim().email(t('contact.validation.emailInvalid')).max(255, "Email must be less than 255 characters"),
+    message: z.string().trim().min(10, t('contact.validation.messageMin')).max(1000, "Message must be less than 1000 characters")
+  });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,10 +39,10 @@ export function ContactForm() {
     setIsSubmitting(true);
     try {
       const validatedData = contactSchema.parse(formData);
-      await postContact(validatedData); // ← jediná funkční změna: volání BE
+      await postContact(validatedData);
       toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+        title: t('contact.success'),
+        description: t('contact.success'),
       });
       setFormData({ name: "", email: "", message: "" });
       setErrors({});
@@ -54,7 +56,7 @@ export function ContactForm() {
       } else {
         toast({
           title: "Error",
-          description: "Failed to send message. Please try again.",
+          description: t('contact.error'),
           variant: "destructive",
         });
       }
@@ -74,10 +76,10 @@ export function ContactForm() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's <span className="text-gradient">Connect</span>
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your business with AI? Get in touch and let's discuss your project.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -130,21 +132,21 @@ export function ContactForm() {
           >
             <Card className="glass">
               <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
+                <CardTitle>{t('contact.title')}</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you soon.
+                  {t('contact.subtitle')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">{t('contact.form.name')}</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Your name"
+                      placeholder={t('contact.form.namePlaceholder')}
                       className={errors.name ? "border-destructive" : ""}
                     />
                     {errors.name && (
@@ -153,14 +155,14 @@ export function ContactForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">{t('contact.form.email')}</Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="your@email.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                       className={errors.email ? "border-destructive" : ""}
                     />
                     {errors.email && (
@@ -169,13 +171,13 @@ export function ContactForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t('contact.form.message')}</Label>
                     <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your project..."
+                      placeholder={t('contact.form.messagePlaceholder')}
                       rows={5}
                       className={errors.message ? "border-destructive" : ""}
                     />
@@ -184,12 +186,12 @@ export function ContactForm() {
                     )}
                   </div>
 
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full glow-primary"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                     <Send className="ml-2 w-4 h-4" />
                   </Button>
                 </form>

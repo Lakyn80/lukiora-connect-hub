@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Bot, Send, X, MessageCircle } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Message {
   id: string;
@@ -43,15 +44,9 @@ function linkify(text: string) {
 }
 
 export function ChatbotWidget() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome-1",
-      text: "Hi! I'm your AI assistant. How can I help you today?",
-      isBot: true,
-      timestamp: Date.now(),
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -75,10 +70,18 @@ export function ChatbotWidget() {
         const parsed: Message[] = JSON.parse(hist);
         if (Array.isArray(parsed) && parsed.length) {
           setMessages(parsed.slice(-MAX_HISTORY));
+          return;
         }
       } catch {}
     }
-  }, []);
+    // Set welcome message if no history
+    setMessages([{
+      id: "welcome-1",
+      text: t('chatbot.welcome'),
+      isBot: true,
+      timestamp: Date.now(),
+    }]);
+  }, [t]);
 
   useEffect(() => {
     sessionStorage.setItem(STORAGE_HISTORY, JSON.stringify(messages.slice(-MAX_HISTORY)));
@@ -236,7 +239,7 @@ export function ChatbotWidget() {
       ...prev,
       {
         id: `err-${Date.now()}`,
-        text: `Error: ${lastErr?.message || "request failed"}`,
+        text: t('chatbot.error'),
         isBot: true,
         timestamp: Date.now(),
       },
@@ -300,7 +303,7 @@ export function ChatbotWidget() {
                   </div>
                   <div>
                     <CardTitle id="ai-chat-title" className="text-lg">
-                      AI Assistant
+                      {t('chatbot.title')}
                     </CardTitle>
                     <p className="text-sm text-muted-foreground">Online</p>
                   </div>
@@ -341,7 +344,7 @@ export function ChatbotWidget() {
                   ))}
                   {isTyping && (
                     <div className="mr-auto max-w-[85%] rounded-2xl bg-neutral-100 px-3 py-2 text-sm italic text-neutral-500 dark:bg-neutral-800">
-                      Typing…
+                      {t('chatbot.send')}...
                     </div>
                   )}
                   <div ref={endRef} />
@@ -362,8 +365,8 @@ export function ChatbotWidget() {
                       }}
                       placeholder={
                         blockedUntil
-                          ? `Temporarily disabled…`
-                          : "Type a message…"
+                          ? t('chatbot.rateLimit')
+                          : t('chatbot.placeholder')
                       }
                       disabled={Boolean(blockedUntil)}
                       className="min-h-[2.5rem] max-h-24 flex-1 resize-none"
