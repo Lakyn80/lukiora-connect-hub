@@ -10,6 +10,8 @@ services:
       - "8006:8002"
     env_file:
       - backend/.env
+    extra_hosts:
+      - "mail.lukiora.com:host-gateway"
     networks:
       - lukiora-network
     restart: unless-stopped
