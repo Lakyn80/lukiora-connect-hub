@@ -35,13 +35,9 @@ export function Navigation() {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="cursor-pointer flex items-center gap-2"
+            className="font-bold text-xl text-gradient cursor-pointer"
           >
-            <img
-              src="/favicon.ico"
-              alt="Lukiora"
-              className="h-8 w-8"
-            />
+            lukiora
           </motion.div>
 
           {/* Desktop Navigation */}
