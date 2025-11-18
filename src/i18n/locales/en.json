@@ -152,6 +152,24 @@
       },
       "demo": "Video demo coming soon",
       "orderNow": "Order Now"
+    },
+    "dataAnalysis": {
+      "title": "Data Analysis",
+      "description": "Advanced data analysis and business intelligence",
+      "features": {
+        "title": "Features",
+        "dataVisualization": "Data Visualization",
+        "predictiveAnalytics": "Predictive Analytics",
+        "customReports": "Custom Reports",
+        "realTimeInsights": "Real-time Insights"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "custom": "Custom Quote",
+        "contact": "Contact us for pricing"
+      },
+      "demo": "Video demo coming soon",
+      "orderNow": "Order Now"
     }
   },
   "comingSoon": {

@@ -152,6 +152,24 @@
       },
       "demo": "Video-Demo in Kürze",
       "orderNow": "Jetzt bestellen"
+    },
+    "dataAnalysis": {
+      "title": "Datenanalyse",
+      "description": "Erweiterte Datenanalyse und Business Intelligence",
+      "features": {
+        "title": "Funktionen",
+        "dataVisualization": "Datenvisualisierung",
+        "predictiveAnalytics": "Prädiktive Analytik",
+        "customReports": "Benutzerdefinierte Berichte",
+        "realTimeInsights": "Echtzeit-Einblicke"
+      },
+      "pricing": {
+        "title": "Preise",
+        "custom": "Individuelles Angebot",
+        "contact": "Kontaktieren Sie uns für Preise"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
     }
   },
   "comingSoon": {

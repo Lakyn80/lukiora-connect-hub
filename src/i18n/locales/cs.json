@@ -152,6 +152,24 @@
       },
       "demo": "Video demo připravujeme",
       "orderNow": "Objednat nyní"
+    },
+    "dataAnalysis": {
+      "title": "Data Analysis",
+      "description": "Pokročilá analýza dat a business intelligence",
+      "features": {
+        "title": "Funkce",
+        "dataVisualization": "Vizualizace dat",
+        "predictiveAnalytics": "Prediktivní analytika",
+        "customReports": "Vlastní reporty",
+        "realTimeInsights": "Real-time přehledy"
+      },
+      "pricing": {
+        "title": "Ceník",
+        "custom": "Individuální nabídka",
+        "contact": "Kontaktujte nás pro cenu"
+      },
+      "demo": "Video demo připravujeme",
+      "orderNow": "Objednat nyní"
     }
   },
   "comingSoon": {

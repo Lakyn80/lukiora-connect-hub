@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { MessageCircle, Send, Bot, TrendingUp, Play, ExternalLink, Layout, PanelsTopLeft, MonitorCog } from "lucide-react";
+import { MessageCircle, Send, Bot, TrendingUp, Play, ExternalLink, Layout, PanelsTopLeft, MonitorCog, BarChart3 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const offeringIcons = {
@@ -13,9 +13,10 @@ const offeringIcons = {
   webCard: { icon: Layout, color: "text-primary" },
   webPresentation: { icon: PanelsTopLeft, color: "text-primary" },
   webClassic: { icon: MonitorCog, color: "text-primary" },
+  dataAnalysis: { icon: BarChart3, color: "text-cyan-500" },
 };
 
-const offeringKeys = ['whatsapp', 'telegram', 'api', 'marketing', 'webCard', 'webPresentation', 'webClassic'];
+const offeringKeys = ['whatsapp', 'telegram', 'api', 'marketing', 'webCard', 'webPresentation', 'webClassic', 'dataAnalysis'];
 
 export function OfferingsSection() {
   const { t } = useTranslation();
