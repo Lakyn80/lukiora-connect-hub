@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "solutions": "Lösungen",
+    "contact": "Kontakt",
+    "getStarted": "Loslegen"
+  },
+  "hero": {
+    "badge": "KI & Web Revolution",
+    "title": "KI-Chatbots & Web-Lösungen",
+    "titleHighlight": "Für Ihr Geschäft",
+    "subtitle": "Automatisieren Sie den Kundensupport, steigern Sie den Umsatz und erweitern Sie Ihre Online-Präsenz mit unseren intelligenten Chatbots und modernen Web-Lösungen.",
+    "ctaPrimary": "Kostenlos starten",
+    "ctaSecondary": "Lösungen ansehen",
+    "scrollDown": "Nach unten scrollen"
+  },
+  "offerings": {
+    "title": "Unsere Lösungen",
+    "subtitle": "Wählen Sie die perfekte Lösung für Ihr Unternehmen",
+    "whatsapp": {
+      "title": "WhatsApp Chatbot",
+      "description": "Automatischer Kundensupport 24/7",
+      "features": {
+        "title": "Funktionen",
+        "support247": "Support 24/7",
+        "orderProcessing": "Auftragsabwicklung",
+        "autoResponses": "Automatische Antworten",
+        "analytics": "Analytik und Statistiken"
+      },
+      "pricing": {
+        "title": "Preise",
+        "setup": "Einrichtung",
+        "setupPrice": "ab 2 500 CZK",
+        "monthly": "Monatliche Gebühr",
+        "monthlyPrice": "ab 500 CZK/Monat"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    },
+    "telegram": {
+      "title": "Telegram Chatbot",
+      "description": "Community-Management und Automatisierung",
+      "features": {
+        "title": "Funktionen",
+        "communityManagement": "Community-Verwaltung",
+        "customCommands": "Benutzerdefinierte Befehle",
+        "notifications": "Benachrichtigungen",
+        "integration": "API-Integration"
+      },
+      "pricing": {
+        "title": "Preise",
+        "setup": "Einrichtung",
+        "setupPrice": "ab 2 000 CZK",
+        "monthly": "Monatliche Gebühr",
+        "monthlyPrice": "ab 400 CZK/Monat"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    },
+    "api": {
+      "title": "KI API Chatbot",
+      "description": "Individueller KI-Assistent, trainiert auf Ihren Daten",
+      "features": {
+        "title": "Funktionen",
+        "customTraining": "Individuelles Training",
+        "multiPlatform": "Multiplattform",
+        "advancedAI": "Fortgeschrittene KI",
+        "fullControl": "Volle Kontrolle"
+      },
+      "pricing": {
+        "title": "Preise",
+        "setup": "Einrichtung",
+        "setupPrice": "ab 5 000 CZK",
+        "monthly": "Monatliche Gebühr",
+        "monthlyPrice": "ab 1 000 CZK/Monat"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    },
+    "marketing": {
+      "title": "KI Marketing-Assistenten",
+      "description": "Automatisierung von Marketingkampagnen mit KI",
+      "features": {
+        "title": "Funktionen",
+        "campaignAutomation": "Kampagnen-Automatisierung",
+        "contentGeneration": "Content-Generierung",
+        "analytics": "Erweiterte Analytik",
+        "personalization": "Personalisierung"
+      },
+      "pricing": {
+        "title": "Preise",
+        "custom": "Individuelles Angebot",
+        "contact": "Kontaktieren Sie uns für Preise"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    },
+    "webCard": {
+      "title": "Web-Visitenkarte",
+      "description": "Einfache einseitige Präsentation Ihres Unternehmens",
+      "features": {
+        "title": "Funktionen",
+        "responsive": "Responsives Design",
+        "seo": "SEO-Optimierung",
+        "fast": "Schnelles Laden",
+        "customDomain": "Eigene Domain"
+      },
+      "pricing": {
+        "title": "Preise",
+        "onetime": "Einmalige Zahlung",
+        "onetimePrice": "ab 1 230 CZK",
+        "hosting": "Hosting",
+        "hostingPrice": "ab 150 CZK/Jahr"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    },
+    "webPresentation": {
+      "title": "Web-Präsentation",
+      "description": "Vollständige 3-Abschnitte-Website für Ihr Unternehmen",
+      "features": {
+        "title": "Funktionen",
+        "threeSections": "3 Inhaltsabschnitte",
+        "contactForm": "Kontaktformular",
+        "gallery": "Fotogalerie",
+        "cms": "Basis-CMS"
+      },
+      "pricing": {
+        "title": "Preise",
+        "onetime": "Einmalige Zahlung",
+        "onetimePrice": "ab 3 210 CZK",
+        "hosting": "Hosting",
+        "hostingPrice": "ab 300 CZK/Jahr"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    },
+    "webClassic": {
+      "title": "Web Classic 365",
+      "description": "Professionelle WordPress-Website mit DIVI-Builder",
+      "features": {
+        "title": "Funktionen",
+        "wordpress": "WordPress + DIVI",
+        "unlimitedPages": "Unbegrenzte Seiten",
+        "ecommerce": "E-Commerce-Optionen",
+        "support": "Jahressupport"
+      },
+      "pricing": {
+        "title": "Preise",
+        "yearly": "Jahresgebühr",
+        "yearlyPrice": "ab 3 650 CZK/Jahr",
+        "includes": "Inklusive Hosting und Wartung"
+      },
+      "demo": "Video-Demo in Kürze",
+      "orderNow": "Jetzt bestellen"
+    }
+  },
+  "comingSoon": {
+    "badge": "Demnächst",
+    "title": "KI-Marketing-Revolution",
+    "subtitle": "Wir bereiten fortschrittliche KI-Tools vor, die die Art und Weise, wie Sie Marketing betreiben, verändern werden.",
+    "features": {
+      "smartTargeting": {
+        "title": "Intelligentes Targeting",
+        "description": "KI identifiziert Ihre idealen Kunden"
+      },
+      "advancedAnalytics": {
+        "title": "Erweiterte Analytik",
+        "description": "Detaillierte Einblicke in die Kampagnenleistung"
+      },
+      "automationSuite": {
+        "title": "Automatisierungs-Suite",
+        "description": "Vollständige Automatisierung von Marketing-Prozessen"
+      },
+      "growthEngine": {
+        "title": "Wachstumsmotor",
+        "description": "KI optimiert Ihre Kampagnen in Echtzeit"
+      }
+    },
+    "notify": "Benachrichtigen Sie mich",
+    "launch": "Erwarteter Start: Q2 2024"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Haben Sie Fragen? Wir helfen gerne!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre@email.de",
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Ihr Projekt oder Ihre Frage...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet..."
+    },
+    "validation": {
+      "nameRequired": "Name ist erforderlich",
+      "nameMin": "Name muss mindestens 2 Zeichen enthalten",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Ungültige E-Mail",
+      "messageRequired": "Nachricht ist erforderlich",
+      "messageMin": "Nachricht muss mindestens 10 Zeichen enthalten"
+    },
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
+    "error": "Entschuldigung, etwas ist schief gelaufen. Bitte versuchen Sie es erneut."
+  },
+  "chatbot": {
+    "title": "Können wir Ihnen helfen?",
+    "placeholder": "Nachricht eingeben...",
+    "send": "Senden",
+    "welcome": "Hallo! Wie kann ich Ihnen heute helfen?",
+    "error": "Entschuldigung, etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+    "rateLimit": "Zu viele Anfragen. Bitte versuchen Sie es in einem Moment."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
+  }
+}

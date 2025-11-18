@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "solutions": "Riešenia",
+    "contact": "Kontakt",
+    "getStarted": "Začať"
+  },
+  "hero": {
+    "badge": "Revolúcia v AI & Webe",
+    "title": "AI Chatboti & Webové riešenia",
+    "titleHighlight": "Pre Váš biznis",
+    "subtitle": "Automatizujte zákaznícku podporu, zvýšte predaje a rozšírte svoju online prítomnosť s našimi inteligentnými chatbotmi a modernými webovými riešeniami.",
+    "ctaPrimary": "Začať zadarmo",
+    "ctaSecondary": "Prezrieť riešenia",
+    "scrollDown": "Rolovať dole"
+  },
+  "offerings": {
+    "title": "Naše riešenia",
+    "subtitle": "Vyberte si perfektné riešenie pre váš biznis",
+    "whatsapp": {
+      "title": "WhatsApp Chatbot",
+      "description": "Automatická zákaznícka podpora 24/7",
+      "features": {
+        "title": "Funkcie",
+        "support247": "Podpora 24/7",
+        "orderProcessing": "Spracovanie objednávok",
+        "autoResponses": "Automatické odpovede",
+        "analytics": "Analytika a štatistiky"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "setup": "Nastavenie",
+        "setupPrice": "od 2 500 Kč",
+        "monthly": "Mesačný poplatok",
+        "monthlyPrice": "od 500 Kč/mesiac"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    },
+    "telegram": {
+      "title": "Telegram Chatbot",
+      "description": "Správa komunity a automatizácia",
+      "features": {
+        "title": "Funkcie",
+        "communityManagement": "Správa komunity",
+        "customCommands": "Vlastné príkazy",
+        "notifications": "Notifikácie",
+        "integration": "Integrácia s API"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "setup": "Nastavenie",
+        "setupPrice": "od 2 000 Kč",
+        "monthly": "Mesačný poplatok",
+        "monthlyPrice": "od 400 Kč/mesiac"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    },
+    "api": {
+      "title": "AI API Chatbot",
+      "description": "Vlastný AI asistent trénovaný na vašich dátach",
+      "features": {
+        "title": "Funkcie",
+        "customTraining": "Vlastný tréning",
+        "multiPlatform": "Multiplatformový",
+        "advancedAI": "Pokročilá AI",
+        "fullControl": "Plná kontrola"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "setup": "Nastavenie",
+        "setupPrice": "od 5 000 Kč",
+        "monthly": "Mesačný poplatok",
+        "monthlyPrice": "od 1 000 Kč/mesiac"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    },
+    "marketing": {
+      "title": "AI Marketingoví asistenti",
+      "description": "Automatizácia marketingových kampaní s AI",
+      "features": {
+        "title": "Funkcie",
+        "campaignAutomation": "Automatizácia kampaní",
+        "contentGeneration": "Generovanie obsahu",
+        "analytics": "Pokročilá analytika",
+        "personalization": "Personalizácia"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "custom": "Individuálna ponuka",
+        "contact": "Kontaktujte nás pre cenu"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    },
+    "webCard": {
+      "title": "Web Vizitka",
+      "description": "Jednoduchá 1-stranová prezentácia vášho biznisu",
+      "features": {
+        "title": "Funkcie",
+        "responsive": "Responzívny dizajn",
+        "seo": "SEO optimalizácia",
+        "fast": "Rýchle načítanie",
+        "customDomain": "Vlastná doména"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "onetime": "Jednorazová platba",
+        "onetimePrice": "od 1 230 Kč",
+        "hosting": "Hosting",
+        "hostingPrice": "od 150 Kč/rok"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    },
+    "webPresentation": {
+      "title": "Web Prezentácia",
+      "description": "Kompletný 3-sekčný web pre vašu firmu",
+      "features": {
+        "title": "Funkcie",
+        "threeSections": "3 sekcie obsahu",
+        "contactForm": "Kontaktný formulár",
+        "gallery": "Fotogaléria",
+        "cms": "Základná CMS"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "onetime": "Jednorazová platba",
+        "onetimePrice": "od 3 210 Kč",
+        "hosting": "Hosting",
+        "hostingPrice": "od 300 Kč/rok"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    },
+    "webClassic": {
+      "title": "Web Classic 365",
+      "description": "Profesionálny WordPress web s DIVI builderom",
+      "features": {
+        "title": "Funkcie",
+        "wordpress": "WordPress + DIVI",
+        "unlimitedPages": "Neobmedzený počet stránok",
+        "ecommerce": "E-shop možnosti",
+        "support": "Ročná podpora"
+      },
+      "pricing": {
+        "title": "Cenník",
+        "yearly": "Ročná platba",
+        "yearlyPrice": "od 3 650 Kč/rok",
+        "includes": "Zahŕňa hosting a údržbu"
+      },
+      "demo": "Video demo pripravujeme",
+      "orderNow": "Objednať teraz"
+    }
+  },
+  "comingSoon": {
+    "badge": "Už čoskoro",
+    "title": "Revolúcia v AI Marketingu",
+    "subtitle": "Pripravujeme pokročilé AI nástroje, ktoré zmenia spôsob, akým robíte marketing.",
+    "features": {
+      "smartTargeting": {
+        "title": "Inteligentné targetovanie",
+        "description": "AI identifikuje vašich ideálnych zákazníkov"
+      },
+      "advancedAnalytics": {
+        "title": "Pokročilá analytika",
+        "description": "Detailné prehľady o výkone kampaní"
+      },
+      "automationSuite": {
+        "title": "Automatizačná Suite",
+        "description": "Kompletná automatizácia marketingových procesov"
+      },
+      "growthEngine": {
+        "title": "Growth Engine",
+        "description": "AI optimalizuje vaše kampane v reálnom čase"
+      }
+    },
+    "notify": "Upozorniť ma",
+    "launch": "Očakávaný štart: Q2 2024"
+  },
+  "contact": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Máte otázky? Radi vám pomôžeme!",
+    "form": {
+      "name": "Meno",
+      "namePlaceholder": "Vaše meno",
+      "email": "Email",
+      "emailPlaceholder": "vas@email.sk",
+      "message": "Správa",
+      "messagePlaceholder": "Popíšte váš projekt alebo otázku...",
+      "submit": "Odoslať správu",
+      "sending": "Odosielanie..."
+    },
+    "validation": {
+      "nameRequired": "Meno je povinné",
+      "nameMin": "Meno musí mať aspoň 2 znaky",
+      "emailRequired": "Email je povinný",
+      "emailInvalid": "Neplatný email",
+      "messageRequired": "Správa je povinná",
+      "messageMin": "Správa musí mať aspoň 10 znakov"
+    },
+    "success": "Ďakujeme! Vaša správa bola odoslaná.",
+    "error": "Ospravedlňujeme sa, niečo sa pokazilo. Skúste to prosím znova."
+  },
+  "chatbot": {
+    "title": "Môžeme vám pomôcť?",
+    "placeholder": "Napíšte správu...",
+    "send": "Odoslať",
+    "welcome": "Ahoj! Ako vám môžem dnes pomôcť?",
+    "error": "Ospravedlňujeme sa, niečo sa pokazilo. Skúste to prosím znova.",
+    "rateLimit": "Príliš veľa požiadaviek. Skúste to prosím o chvíľu."
+  },
+  "footer": {
+    "rights": "Všetky práva vyhradené",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
+  }
+}

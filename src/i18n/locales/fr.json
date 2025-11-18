@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "contact": "Contact",
+    "getStarted": "Commencer"
+  },
+  "hero": {
+    "badge": "Révolution IA & Web",
+    "title": "Chatbots IA et Solutions Web",
+    "titleHighlight": "Pour Votre Entreprise",
+    "subtitle": "Automatisez le support client, augmentez les ventes et développez votre présence en ligne avec nos chatbots intelligents et solutions web modernes.",
+    "ctaPrimary": "Commencer gratuitement",
+    "ctaSecondary": "Voir les solutions",
+    "scrollDown": "Faire défiler vers le bas"
+  },
+  "offerings": {
+    "title": "Nos solutions",
+    "subtitle": "Choisissez la solution parfaite pour votre entreprise",
+    "whatsapp": {
+      "title": "Chatbot WhatsApp",
+      "description": "Support client automatique 24/7",
+      "features": {
+        "title": "Fonctionnalités",
+        "support247": "Support 24/7",
+        "orderProcessing": "Traitement des commandes",
+        "autoResponses": "Réponses automatiques",
+        "analytics": "Analytique et statistiques"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "setup": "Configuration",
+        "setupPrice": "à partir de 2 500 CZK",
+        "monthly": "Frais mensuels",
+        "monthlyPrice": "à partir de 500 CZK/mois"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    },
+    "telegram": {
+      "title": "Chatbot Telegram",
+      "description": "Gestion de communauté et automatisation",
+      "features": {
+        "title": "Fonctionnalités",
+        "communityManagement": "Gestion de communauté",
+        "customCommands": "Commandes personnalisées",
+        "notifications": "Notifications",
+        "integration": "Intégration API"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "setup": "Configuration",
+        "setupPrice": "à partir de 2 000 CZK",
+        "monthly": "Frais mensuels",
+        "monthlyPrice": "à partir de 400 CZK/mois"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    },
+    "api": {
+      "title": "Chatbot IA API",
+      "description": "Assistant IA personnalisé formé sur vos données",
+      "features": {
+        "title": "Fonctionnalités",
+        "customTraining": "Formation personnalisée",
+        "multiPlatform": "Multi-plateforme",
+        "advancedAI": "IA avancée",
+        "fullControl": "Contrôle total"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "setup": "Configuration",
+        "setupPrice": "à partir de 5 000 CZK",
+        "monthly": "Frais mensuels",
+        "monthlyPrice": "à partir de 1 000 CZK/mois"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    },
+    "marketing": {
+      "title": "Assistants Marketing IA",
+      "description": "Automatisation des campagnes marketing avec IA",
+      "features": {
+        "title": "Fonctionnalités",
+        "campaignAutomation": "Automatisation des campagnes",
+        "contentGeneration": "Génération de contenu",
+        "analytics": "Analytique avancée",
+        "personalization": "Personnalisation"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "custom": "Offre personnalisée",
+        "contact": "Contactez-nous pour les tarifs"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    },
+    "webCard": {
+      "title": "Carte de Visite Web",
+      "description": "Présentation simple d'une page de votre entreprise",
+      "features": {
+        "title": "Fonctionnalités",
+        "responsive": "Design responsive",
+        "seo": "Optimisation SEO",
+        "fast": "Chargement rapide",
+        "customDomain": "Domaine personnalisé"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "onetime": "Paiement unique",
+        "onetimePrice": "à partir de 1 230 CZK",
+        "hosting": "Hébergement",
+        "hostingPrice": "à partir de 150 CZK/an"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    },
+    "webPresentation": {
+      "title": "Présentation Web",
+      "description": "Site web complet de 3 sections pour votre entreprise",
+      "features": {
+        "title": "Fonctionnalités",
+        "threeSections": "3 sections de contenu",
+        "contactForm": "Formulaire de contact",
+        "gallery": "Galerie photo",
+        "cms": "CMS de base"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "onetime": "Paiement unique",
+        "onetimePrice": "à partir de 3 210 CZK",
+        "hosting": "Hébergement",
+        "hostingPrice": "à partir de 300 CZK/an"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    },
+    "webClassic": {
+      "title": "Web Classic 365",
+      "description": "Site WordPress professionnel avec constructeur DIVI",
+      "features": {
+        "title": "Fonctionnalités",
+        "wordpress": "WordPress + DIVI",
+        "unlimitedPages": "Pages illimitées",
+        "ecommerce": "Options e-commerce",
+        "support": "Support annuel"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "yearly": "Frais annuels",
+        "yearlyPrice": "à partir de 3 650 CZK/an",
+        "includes": "Inclut hébergement et maintenance"
+      },
+      "demo": "Démo vidéo bientôt",
+      "orderNow": "Commander maintenant"
+    }
+  },
+  "comingSoon": {
+    "badge": "Bientôt disponible",
+    "title": "Révolution du Marketing IA",
+    "subtitle": "Nous préparons des outils IA avancés qui changeront votre façon de faire du marketing.",
+    "features": {
+      "smartTargeting": {
+        "title": "Ciblage intelligent",
+        "description": "L'IA identifie vos clients idéaux"
+      },
+      "advancedAnalytics": {
+        "title": "Analytique avancée",
+        "description": "Aperçus détaillés sur les performances des campagnes"
+      },
+      "automationSuite": {
+        "title": "Suite d'automatisation",
+        "description": "Automatisation complète des processus marketing"
+      },
+      "growthEngine": {
+        "title": "Moteur de croissance",
+        "description": "L'IA optimise vos campagnes en temps réel"
+      }
+    },
+    "notify": "Me notifier",
+    "launch": "Lancement prévu : T2 2024"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez des questions ? Nous serons ravis de vous aider !",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.fr",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre projet ou votre question...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "nameMin": "Le nom doit contenir au moins 2 caractères",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Email invalide",
+      "messageRequired": "Le message est requis",
+      "messageMin": "Le message doit contenir au moins 10 caractères"
+    },
+    "success": "Merci ! Votre message a été envoyé.",
+    "error": "Désolé, quelque chose s'est mal passé. Veuillez réessayer."
+  },
+  "chatbot": {
+    "title": "Pouvons-nous vous aider ?",
+    "placeholder": "Tapez un message...",
+    "send": "Envoyer",
+    "welcome": "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+    "error": "Désolé, quelque chose s'est mal passé. Veuillez réessayer.",
+    "rateLimit": "Trop de requêtes. Veuillez réessayer dans un instant."
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
+  }
+}

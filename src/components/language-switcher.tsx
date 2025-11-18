@@ -11,6 +11,12 @@ import {
 const languages = [
   { code: 'cs', name: 'Čeština', flag: '🇨🇿' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹' },
 ];
 
 export function LanguageSwitcher() {
@@ -30,7 +36,7 @@ export function LanguageSwitcher() {
           <span className="sr-only">Change language</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="max-h-[400px] overflow-y-auto">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
@@ -39,7 +45,7 @@ export function LanguageSwitcher() {
               i18n.language === lang.code ? 'bg-accent' : ''
             }`}
           >
-            <span className="mr-2">{lang.flag}</span>
+            <span className="mr-2 text-lg">{lang.flag}</span>
             {lang.name}
           </DropdownMenuItem>
         ))}
