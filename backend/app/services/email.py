@@ -124,6 +124,19 @@ Your message:
 Best regards,
 Lukiora Team
 service@lukiora.com
+
+---
+
+Здравствуйте {payload.name},
+
+Спасибо за Ваше сообщение. Мы успешно получили Ваш запрос и ответим как можно скорее, обычно в течение 24 часов.
+
+Ваше сообщение:
+{payload.message}
+
+С уважением,
+Команда Lukiora
+service@lukiora.com
 """
     msg.set_content(body)
     return msg
