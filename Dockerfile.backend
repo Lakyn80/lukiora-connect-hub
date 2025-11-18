@@ -12,7 +12,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ .
 
 # Expose port
-EXPOSE 8002
+EXPOSE 8006
+
+# Unbuffer Python output for Docker logs
+ENV PYTHONUNBUFFERED=1
 
 # Run uvicorn on port 8006
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8006"]

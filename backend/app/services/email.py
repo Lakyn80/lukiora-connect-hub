@@ -31,8 +31,12 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
     if not settings.SMTP_HOST:
         return "SMTP not configured"
 
+    import logging
+    logger = logging.getLogger("uvicorn.error")
+
     try:
         # 1. Odeslat notifikaci na service@lukiora.com
+        logger.info(f"Sending contact email to {settings.EMAIL_TO} from {payload.email}")
         msg = _build_contact_message(payload)
         use_tls = settings.SMTP_PORT == 465
 
@@ -61,7 +65,10 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
                 use_tls=False,
             )
 
+        logger.info("Notification email sent successfully")
+
         # 2. Odeslat potvrzení klientovi
+        logger.info(f"Sending confirmation email to {payload.email}")
         confirmation = _build_confirmation_message(payload)
         if use_tls:
             await aiosmtplib.send(
@@ -86,12 +93,11 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
                 use_tls=False,
             )
 
+        logger.info("Confirmation email sent successfully")
         return None
     except Exception as e:
         # Log error but don't fail the request
-        import traceback
-        print(f"Email error: {e}")
-        print(traceback.format_exc())
+        logger.error(f"Email sending failed: {e}", exc_info=True)
         return f"Email failed: {str(e)}"
 
 def _build_confirmation_message(payload: ContactIn) -> EmailMessage:
