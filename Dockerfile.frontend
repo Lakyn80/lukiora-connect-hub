@@ -12,7 +12,10 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Build the app
+# Copy production env file
+COPY .env.production .env.production
+
+# Build the app for production
 RUN npm run build
 
 # Production stage
