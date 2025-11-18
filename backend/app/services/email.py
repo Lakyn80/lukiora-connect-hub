@@ -37,26 +37,26 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
         use_tls = settings.SMTP_PORT == 465
 
         if use_tls:
-            # SMTPS (implicit TLS)
+            # SMTPS (implicit TLS) - port 465
             await aiosmtplib.send(
                 msg,
                 hostname=settings.SMTP_HOST,
                 port=settings.SMTP_PORT,
                 username=settings.SMTP_USER,
                 password=settings.SMTP_PASS,
-                timeout=20,
+                timeout=60,  # Increased timeout
                 start_tls=False,
                 use_tls=True,
             )
         else:
-            # STARTTLS (např. port 587)
+            # STARTTLS - port 587
             await aiosmtplib.send(
                 msg,
                 hostname=settings.SMTP_HOST,
                 port=settings.SMTP_PORT,
                 username=settings.SMTP_USER,
                 password=settings.SMTP_PASS,
-                timeout=20,
+                timeout=60,  # Increased timeout
                 start_tls=True,
                 use_tls=False,
             )
@@ -70,7 +70,7 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
                 port=settings.SMTP_PORT,
                 username=settings.SMTP_USER,
                 password=settings.SMTP_PASS,
-                timeout=20,
+                timeout=60,  # Increased timeout
                 start_tls=False,
                 use_tls=True,
             )
@@ -81,7 +81,7 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
                 port=settings.SMTP_PORT,
                 username=settings.SMTP_USER,
                 password=settings.SMTP_PASS,
-                timeout=20,
+                timeout=60,  # Increased timeout
                 start_tls=True,
                 use_tls=False,
             )
@@ -89,7 +89,9 @@ async def send_contact_email(payload: ContactIn) -> Optional[str]:
         return None
     except Exception as e:
         # Log error but don't fail the request
+        import traceback
         print(f"Email error: {e}")
+        print(traceback.format_exc())
         return f"Email failed: {str(e)}"
 
 def _build_confirmation_message(payload: ContactIn) -> EmailMessage:
