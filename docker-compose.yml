@@ -6,14 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile.backend
     container_name: lukiora-backend
-    ports:
-      - "8006:8002"
+    network_mode: "host"
     env_file:
       - backend/.env
-    extra_hosts:
-      - "mail.lukiora.com:host-gateway"
-    networks:
-      - lukiora-network
     restart: unless-stopped
 
   frontend:
