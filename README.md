@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# Lukiora Connect Hub
 
-## Project info
+Central hub and landing platform for Lukiora projects, designed as a lightweight full-stack web application with a clean frontend and a simple backend foundation.
 
-**URL**: https://lovable.dev/projects/465244c6-7168-43f5-a225-0c891152a5da
+This repository serves as a production-ready web entry point for presenting products, services, and future integrations under the Lukiora brand.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Overview
 
-**Use Lovable**
+Lukiora Connect Hub is a web platform intended to:
+- present Lukiora products and services
+- act as a central connection point between projects
+- serve as a base for future integrations and extensions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/465244c6-7168-43f5-a225-0c891152a5da) and start prompting.
+The project prioritizes clarity, modern UI, and a clean technical setup suitable for production deployment.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Architecture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Browser  
+→ Frontend (React / Vite)  
+→ Backend (Python, minimal API foundation)  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The architecture is intentionally simple and extensible, allowing gradual growth without early overengineering.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Frontend
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+Tech stack:
+- React
 - Vite
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- shadcn/ui
 
-## How can I deploy this project?
+Key characteristics:
+- Modern component-based UI
+- Clean landing-page–style presentation
+- Prepared for expansion into a multi-page application
+- Focus on readability, spacing, and professional layout
 
-Simply open [Lovable](https://lovable.dev/projects/465244c6-7168-43f5-a225-0c891152a5da) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## Backend
 
-Yes, you can!
+- Python-based backend foundation
+- Prepared for API endpoints and integrations
+- Intended for future connection with other Lukiora services
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+(Current backend scope is intentionally minimal.)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## Configuration & Security
+
+- Environment-specific configuration via `.env` files
+- Development variables separated from production
+- No secrets hardcoded in application logic
+- Sensitive values excluded via `.gitignore`
+
+---
+
+## Repository Structure
+
+backend/ – backend foundation  
+src/ – React + TypeScript frontend  
+public/ – static assets  
+tailwind.config.ts / postcss.config.js – styling configuration  
+vite.config.ts – build and dev configuration  
+README.md
+
+---
+
+## Project Status
+
+Early-stage / foundational project.
+
+Planned direction:
+- Expansion into a central dashboard for Lukiora services
+- Integration with backend APIs from other Lukiora projects
+- Authentication and protected sections
+- Deployment as the main public-facing Lukiora web hub
+
+---
+
+## Author
+
+Developed and maintained by Lukas Krumpach  
+Full-stack / Backend-focused Python developer
